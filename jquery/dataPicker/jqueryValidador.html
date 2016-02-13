@@ -1,0 +1,64 @@
+<!--
+   https://developers.google.com/speed/libraries/#jquery 
+
+https://www.youtube.com/watch?v=Hqh68NO3oHc&index=7&list=PLmamiIMamUtrP9L6WzdpBBsZMyaxXDHfk
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jquery validador</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+      <script src="../library/widgets/jquery-ui-1.11.4.custom/jquery-ui.js"></script>  
+<!--<script src="../library/widgets/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>-->
+		<script src="../library/validator/dist/jquery.validate.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="../library/widgets/jquery-ui-1.11.4.custom/jquery-ui.css">
+<!--<link rel="stylesheet" type="text/css" href="../library/widgets/jquery-ui-1.11.4.custom/jquery-ui.min.css">-->
+      <link rel="stylesheet" type="text/css" href="../library/widgets/jquery-ui-1.11.4.custom/jquery-ui.structure.css">
+<!--<link rel="stylesheet" type="text/css" href="../library/widgets/jquery-ui-1.11.4.custom/jquery-ui.structure.min.css">-->
+      <link rel="stylesheet" type="text/css" href="../library/widgets/jquery-ui-1.11.4.custom/jquery-ui.theme.css">
+<!--<link rel="stylesheet" type="text/css" href="../library/widgets/jquery-ui-1.11.4.custom/jquery-ui.theme.min.css">-->
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#forml').validate({
+					rules: {
+						name: {required:true, minlength:4, maxlength:27},
+						surname: {required:true, minlength:9, maxlength:55},
+						email: {required:true, minlength:14, maxlength:70, email:true},
+						phone: {required:true, minlength:10, maxlength:13}
+					},	
+					messages:{
+						name: {required:"field name obligatorio", minlength:"minimun lenght for name is 5 characteres", maxlength:"maximun lenght for name is 27 characteres"},
+						surname: {required:"field surname obligatorio",minlength:"minimun lenght for surname is 11 charactres", maxlength:"maximun lenght for surname is 55 characteres"},
+						email: "email incorrect",
+//						email: {required:"email is obligatorio", minlength:"minimun lenght for email is 17 charactres", maxlength:"maximun lenght for email is 70 characteres"}
+						phone: "phone incorrect"
+//						phone: {required:"phone is obligatorio"}
+					},
+					errorElement: "span"//write error justo al lado del input
+				//	errorElement: "div"//da un salto de linea y escrive el error
+				});
+			});
+		//	$('#enter').button(){
+		</script>	
+	</head>
+	<body>
+		<form id="forml" action="" method="post">
+			<h1>Enter next fields</h1><br/>
+			<label for="name">Name *</label>
+			<input type="text" id="name" name="name" /><br/>
+			
+			<label for="surname">Surname *</label>
+			<input type="text" id="surname" name="surname"/></br>
+			
+			<label for="email">Email *</label>
+			<input type="email" id="email" name="email"/><br/>
+
+			<label for="phone">Phone *</label>
+			<input type="text" id="phone" name="phone"/><br/>
+		
+			<input type="submit" id="enter" value="register"/><br/>
+			<input type="reset" id="reset" value="reset"/><br/>
+		</form>
+		
+	</body>
+</html>

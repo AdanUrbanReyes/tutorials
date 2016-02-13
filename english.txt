@@ -1,0 +1,12 @@
+personal object pronouns
+singular: me, you, him, her, it
+			 i   you  he   she  it
+plural: us, you, them
+		  we  you  they
+
+examples.
+anna knows james well = anna knows him well
+anna knows nadia well = anna knows her well
+anna knows french well = anna knows it well
+she is staying with agata and victor = she is staying with us
+anna knows jack and alice well =  anna knows them well

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Acordeon</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+				border:0;
+			}
+			div#acordeon{
+				width:600px;
+				min-height:50px;
+				background-color:red;
+				margin:170px auto;
+			}
+			div.subapartado{
+				width:200px;
+				min-height:50px;
+				background-color:green;
+				float:left;
+			}
+			div.title{
+				width:200px;
+				height:50px;
+				background-color:#24c06f;
+				overflow:hidden;
+			}
+			p.title{
+				margin:13px;
+				text-align:right;
+				color:white;
+			}
+			div.information{
+				width:600px;
+				height:0px;
+				background-color:#f5f5f5;
+				overflow:hidden;
+				transition: height 1s;
+			}
+			p.information{
+				margin:20px;
+				text-align:center;
+				color:#4f4f4f;
+			}
+			div.subapartado:hover div.information{ /*here was all magia of acordeon. al make hover sobre div.subapartado afectamos a div.informacion modific height of div.information*/
+				height:180px;
+			}
+			body{
+				background:#666;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="acordeon">
+			<div class="subapartado">
+				<div class="title">
+					<p class="title">Ayan</p>
+				</div>
+				<div class="information">
+					<p class="information">Ayan is a great chick that want have super powers main he want control all peaple of this work. he has twenty one years and he study in ESCOM IP is the best programer.</p>	
+				</div>
+			</div>
+			<div class="subapartado">
+				<div class="title">
+					<p class="title">Alejandra</p>
+				</div>
+				<div class="information">
+					<p class="information">Alejandra is a great chick that want be all time with ayan becose she love him very much . she has twenty one years and he study ...</p>	
+				</div>
+			</div>
+			<div class="subapartado">
+				<div class="title">
+					<p class="title">Itachi</p>
+				</div>
+				<div class="information">
+					<p class="information">Ayan is a great chick that want have super powers main he want control all peaple of this work. he has twenty one years and he study in ESCOM IP is the best programer.</p>	
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

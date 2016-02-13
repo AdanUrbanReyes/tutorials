@@ -1,0 +1,34 @@
+<!--
+	https://developers.google.com/speed/libraries/#jquery	
+https://www.youtube.com/watch?v=Hqh68NO3oHc&index=7&list=PLmamiIMamUtrP9L6WzdpBBsZMyaxXDHfk
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>widges jquery</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>	
+		<script src="../library/widgets/jquery-ui-1.11.4.custom/jquery-ui.js"></script>	
+<!--<script src="../library/widgets/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>-->
+		<link rel="stylesheet" type="text/css" href="../library/widgets/jquery-ui-1.11.4.custom/jquery-ui.css">
+<!--<link rel="stylesheet" type="text/css" href="../library/widgets/jquery-ui-1.11.4.custom/jquery-ui.min.css">-->
+		<link rel="stylesheet" type="text/css" href="../library/widgets/jquery-ui-1.11.4.custom/jquery-ui.structure.css">
+<!--<link rel="stylesheet" type="text/css" href="../library/widgets/jquery-ui-1.11.4.custom/jquery-ui.structure.min.css">-->
+		<link rel="stylesheet" type="text/css" href="../library/widgets/jquery-ui-1.11.4.custom/jquery-ui.theme.css">
+<!--<link rel="stylesheet" type="text/css" href="../library/widgets/jquery-ui-1.11.4.custom/jquery-ui.theme.min.css">-->
+		<script type="text/javascript">
+			$(function(){
+				$('#startDate').datepicker({
+					currentText:"Now",
+					dateFormat:"yy-mm-dd",
+					appendText:"(yyyy-mm-dd)"
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<form id="formnew" action="" method="post">
+			<p><label for="startDate">start date</label></p>
+			<p><input type="text" name="startDate" id="startDate"/></p>
+		</form>
+	</body>
+</html>
