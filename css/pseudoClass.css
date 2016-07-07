@@ -1,0 +1,22 @@
+a{
+	text-decoration:none;
+}
+a:link{
+	color:red;
+}
+a:visited{
+	color:blue;
+}
+a:hover{
+	background-color:blue;
+}
+input:focus{
+	border-color:yellow;
+	background-color:pink;
+}
+input:hover{
+	background-color:brown;
+}
+ul li:nth-child(1){
+	color:green;
+}

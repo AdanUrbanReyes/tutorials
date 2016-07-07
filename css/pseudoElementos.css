@@ -1,0 +1,23 @@
+p{
+	font-size:70px;/*chage size of letter*/
+	
+}
+p:first-letter{/*modifica the first letter of parrafo */
+	font-size:90px;/*change size of letter*/
+	font-weight:bold;/*change style of bold*/
+	color:red;/*change color*/
+}
+p:first-line{/*modifica just first line of parrafo*/
+	color:green;/*change color */
+	text-decoration:underline;/*subraya el texto*/
+}
+ul li{
+	font-size:50px;/*change size of letter*/
+	list-style-type:none;/*remove volitas que aparecen in lista */
+}
+ul li:before{/*style for the etiqueta li that este dentro de una ul*/
+	content:url(sharingan.png);/*put the image before work of list */
+}
+ul li:after{
+	content:url(sharingan.png);/*put the image after work of list */
+}
