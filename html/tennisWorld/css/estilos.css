@@ -1,0 +1,72 @@
+*{
+	border:0;
+	margin:0;
+	padding:0;
+}
+body{
+	background:#ccc;
+}
+section#contenedor{
+	width:1000px;
+}
+section#contenedor{
+	box-shadow:15px 3px 10px #fff;
+	background: #cdc;
+	height:1180px;
+	margin: auto;
+}
+header{
+	background:#fff;
+	height:200px;
+}
+header img{
+	margin-top:35px;
+}
+header section#menu{
+	background:#000;
+	width:600px;
+	height:100px;
+	margin-top:70px;
+	float:right;
+}
+section#banner{
+	background:#81BEF7;
+	height:400px;
+}
+section#noticias{
+	background:#FF8000;
+	height:220px;
+}
+article.noticia, article.producto{
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:5px;
+	margin-right:5px;
+	display:inline-block;
+}
+article.noticia{
+	background:red;
+	height:200px;
+	width:320px;
+}
+section#tienda{
+	background:#2E2EFE;
+	height:200px;
+}
+article.producto{
+	background:yellow;
+	height:180px;
+	width:320px;
+}
+section#marcas{
+	background:#F5A9F2;
+	height:100px;
+}
+footer{
+	background:#6E6E6E;
+	height:60px;
+}
+footer h2, footer h4{
+	text-align:center;
+	color:#fff;
+}

@@ -1,0 +1,14 @@
+// all sings $ or # to start of line is by terminal, $ is went we are in user mode and # is went we are in root mode
+// user configuration
+$git config --global user.name "Adan Urban Reyes"
+// show user.name configuration
+$git config --global user.name
+// email configuration
+$git config --global user.email "adanurbanreyes@gmail.com"
+// show user.email configuration
+$git config --global user.email
+// for set colors to git responses
+$git config --global color.ui true
+// show all configuration put by we
+$git config --global --list
+
