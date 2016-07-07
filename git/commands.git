@@ -11,4 +11,50 @@ $git config --global user.email
 $git config --global color.ui true
 // show all configuration put by we
 $git config --global --list
+//mark the start of proyect
+$git init
+//show status of our proyect
+$git status
+//add files to commit
+$git add . //add all file that an sido modified
+$git add [nameFile] // add a especific file
+//add changes
+$git commit -m "[message for identificar the commit]"
+//show all our commits with their information
+$git log
+//we travel throw of our commits or branch
+$git checkout [where do we like travel]
+$git checkout [MD5] //travel to commit on specific this MD5 we can obtain wit comand $git log
+$git checkout master //travel to last commit
+$git checkout [branch's name] //travel to branch (the branch deve exists)
+$git checkout -D [branch's name] //create branch and travel to this
+//kill commits
+$git reset --soft [MD5] //--soft indica that only kill commits sin touch we working area this MD5 we can obtain wit comand $git log
+$git reset --hard [MD5] //--soft indica that kill all (commits and working area) this MD5 we can obtain wit comand $git log
+/*
+	whit  put kill commits. Is because for example we have 3 commits
+	comit 1 MD5=137;
+	comit 2 MD5=713;
+	comit 3 MD5=111;
 
+	if we use a any $git reset --soft or $git reset --hard and to cualquiera of this command pass a MD5
+	for example
+	$git reset --reset 111
+	the command behind will drop commit 1 and commit 2 
+	then if we execute $git log we only have commit 3 and we working area pass to commit 3 also
+	if we execute
+	$git reset --soft 111
+	also remove commit 1 and commit 2 but we working area stay with files that have commit 1 
+	but if we execute
+	$git log  onli have commit 3
+*/
+//create branch
+$git branch [nameForNewBranch]
+//merge branch with other branch, for make this first we have to move to branch that will absorver the other branch
+//then execute next command
+$git merge [branch' name that will be abosorver]
+/* 
+	types of merge
+	fast-forward: only make marge sin ask us
+	manual-merge: this pass with we work on team for this git ask us
+*/
