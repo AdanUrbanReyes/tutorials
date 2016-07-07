@@ -58,3 +58,16 @@ $git merge [branch' name that will be abosorver]
 	fast-forward: only make marge sin ask us
 	manual-merge: this pass with we work on team for this git ask us
 */
+/*
+	git and github aren't same git is a management and github is like facebook so
+	github only contains we repositories(proyects)
+	exists 2 types of repositories
+	local repositories are los que we have in our computer
+	remote repositories are los que we have in out github
+*/
+//vincular we local repositori with remote repositori
+$git remote add origin [link] //the link we get of github and start with https
+//show vinculaciones
+$git remote -v
+//remove vinculaciones
+$git remote remove origin
