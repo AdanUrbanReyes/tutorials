@@ -1,0 +1,77 @@
+//show all databases
+show dbs
+
+//use a database
+use [name of database]
+
+//show current database
+db
+
+//show collections in current database
+show collections
+
+//create collection
+db.createCollection([name of collection between quotes])
+
+//create collection and in the same time insert in collection
+db.[name of collection].insert([JSON])
+
+//drop collection
+db.[name of collection].drop()
+
+//drop current database
+db.dropDatabase()
+
+//show elements of current database in collection
+db.[name of collection].find()
+db.[name of collection].findOne()
+db.[name of collection].find().limit([number or documentos which i want])
+db.[name of collection].find().pretty()
+db.[name of collection].findOne().pretty()
+db.[name of collection].find().limit([number or documentos which i want]).pretty()
+
+// update document
+db.[name of collection].update([JSON WITH WHERE], [JSON WITH UPDATE])
+
+//delete document
+db.[name of collection].deleteOne([JSON WITH WHERE])
+
+
+
+
+//example we have a collection named user with next state
+{
+  "id" : "1",
+  "name" : "Adan"
+  "age" : 25
+}
+{
+
+  "id" : "1",
+  "name" : "Alejandra"
+  "age" : 24
+}
+{
+
+  "id" : "2",
+  "name" : "Emily"
+  "age" : 1
+}
+
+db.user.update({ "id" : "1"}, { $set : {"name" : "Ayan"} }) // just update one register
+
+db.user.update({ "id" : "1"}, { $set : {"name" : "Ayan"} }, {multi : true}) // update all who has id 1
+
+db.user.deleteOne({ "id" : "1"})
+
+db.[name of collection].find({"name" : "Adan"}) //find all elements wich attribute name is equals to Adan
+
+db.users.find({"age" : {$lt : 25} }) //find all elements wich attribute age is less than 25
+db.users.find({"age" : {$lte : 25} }) //find all elements wich attribute age is equal or less than 25
+db.users.find({"age" : {$gt : 25} }) //find all elements wich attribute age is greater than 25
+db.users.find({"age" : {$gte : 25} }) //find all elements wich attribute age is equal or greater than 25
+db.users.find({"age" : {$ne : 25} }) //find all elements wich attribute age is NOT equal to 25
+db.users.find({"age" : {$lt : 25}, "name" : "Adan" }) //find all elements wich attribute age is less than 25 and name atribute is "Adan"
+db.users.find({"age" : {$lt : 25}, $or [ "name" : "Alejandra" ] }) //find all elements wich attribute age is less than 25  OR name atribute is "Alejandra"
+db.user.find().sort({"age" : 1}) //get all users order by age lest to greater
+db.user.find().sort({"age" : -1}) //get all users order by age greater to lest
