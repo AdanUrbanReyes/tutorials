@@ -1,0 +1,9 @@
+#!/bin/bash
+# next command is usefull when you have multiple networks in your phisical machine example ethernet and wifi..
+# next command say linux all trafic we ask to ip 10.0.0.0/8 have to use network wich have "Puerta de enlace" 10.51.40.1 and is
+# in the eno1 interface
+sudo ip route add 10.0.0.0/8 via 10.51.40.1 dev eno1
+# atributes to change when you wanna use before command
+#10.0.0.0/8
+#10.51.40.1
+#eno1
